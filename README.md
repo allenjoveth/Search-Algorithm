@@ -19,12 +19,54 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-
+Program for linear search method to match the item in a list
+Developed by:Allen Joveth P
+RegisterNumber: 23009582
+'''
+def linearSearch(array,n,k):
+    for i in range(0,n):
+        if(array[i]==k):
+            return i
+    return -1
+array = eval(input())
+k = eval(input())
+n=len(array)
+array.sort()
+print(array)
+result = linearSearch(array,n,k)
+if result != -1:
+    print(f"Element found at index:  {result}")
+else:
+    print(f"Element not found ")
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+Program to find the element in a list using Binary Search(Iterative Method)..
+Developed by:Allen Joveth P
+RegisterNumber: 23009582
+'''
+def binarysearch(array, k, low, high):
+    while low<=high:
+        mid=(low+high)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+    
+array = eval(input())
+array.sort()
+k = eval(input())
+result=binarysearch(array,k,0,len(array)-1)
+print(array)
+if result!=-1:
+    print(f"Element found at index:  {result}")
+else:
+    print(f"Element not found")
 
 
 
@@ -33,13 +75,41 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
+Program to find the element in a list using Binary Search (recursive Method).
+Developed by:Allen Joveth P
+RegisterNumber: 23009582
+'''
+def binarysearch(array, k, low, high):
+    while low<=high:
+        mid=(low+high)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+    
+array = eval(input())
+array.sort()
+k = eval(input())
+result=binarysearch(array,k,0,len(array)-1)
+print(array)
+if result!=-1:
+    print(f"Element found at index:  {result}")
+else:
+    print(f"Element not found")
 
 
 
 
 ```
 ## Sample Input and Output
+![Screenshot 2023-12-27 204402](https://github.com/allenjoveth/Search-Algorithm/assets/139422287/7e0fe77e-2b91-49c3-9624-10c67cc243be)
+![Screenshot 2023-12-27 204624](https://github.com/allenjoveth/Search-Algorithm/assets/139422287/22079d98-a0ec-47db-92c4-37e20c046e73)
+![Screenshot 2023-12-27 204653](https://github.com/allenjoveth/Search-Algorithm/assets/139422287/be79d729-dd16-4643-9dd6-2947588eeb2b)
+
+
 
 
 
